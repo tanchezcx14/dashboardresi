@@ -7,13 +7,13 @@
 
   $consulta = "SELECT idUsuario FROM usuarios where nombreUsuario='$user' and claveUsuario='$pass'";
   $resultado=mysqli_query($conexion,$consulta);
-  $filas = mysqli_fetch_array($resultado);
+  $filas = mysqli_fetch_assoc($resultado);
 
   if($filas>0)
   {
     session_start();
     $_SESSION['usuario']=$filas[0];
-    header("Location: ../vistas/dashboard.php");
+    header("Location: ../vistas/inicio.php");
   }
   else
   {

@@ -5,8 +5,7 @@ function conectar(){
     $pass="";
     $bd="clinicaComunitarias";
 
-    $con=mysqli_connect($host,$user,$pass);
-    mysqli_select_db($con,$bd);
+    $con=mysqli_connect($host,$user,$pass,$bd);
     return $con;
 }
 ?>
